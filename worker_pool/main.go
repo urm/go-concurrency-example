@@ -25,7 +25,6 @@ func worker(jobs <-chan string, results chan<- task, wg *sync.WaitGroup) {
 		res := processURL(URL)
 		results <- task{URL: URL, result: res}
 	}
-
 }
 
 func processURL(URL string) int {
